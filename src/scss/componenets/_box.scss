@@ -1,0 +1,65 @@
+.box {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: $--color-grey-light-1;
+  box-shadow: $--shadow-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__protector {
+    margin: 8rem 8rem;
+    background-color: $--color-grey-light-1;
+    box-shadow: $--shadow-dark;
+    min-width: 80rem;
+    min-height: 30rem;
+    text-align: center;
+    display: flex;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin: 0;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+    }
+    &-inner {
+      //align-items: center;
+      //justify-content: center;
+      margin: auto;
+
+      &--link {
+        cursor: pointer;
+        color: $--color-primary !important;
+      }
+    }
+  }
+}
+
+.form-signin {
+  max-width: 50rem;
+  margin: 8rem auto;
+  background-color: $--color-grey-light-1;
+  box-shadow: $--shadow-dark;
+  padding: 10rem;
+}
+
+.form-logo {
+  width: 10rem;
+  height: 10rem;
+  fill: $--color-primary;
+}
+
+.font-weight-normal {
+  font-weight: 400!important;
+}
+
+
+
+

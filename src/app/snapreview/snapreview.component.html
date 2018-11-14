@@ -1,0 +1,50 @@
+<span class="camera">
+  <div class="front-side">
+  <div class="color-grid">
+    <div class="black"></div>
+    <div class="red1"></div>
+    <div class="red2"></div>
+    <div class="green"></div>
+  </div>
+
+  <div class="info-grid">
+    <div class="name">
+      <h2>{{ businesscard?.fname }}</h2>
+      <h3>{{ businesscard?.lname }}</h3>
+    </div>
+
+    <div class="addr">
+      <svg width="5rem" height="5rem">
+        <use xlink:href="../../assets/sprite.svg#business-card-location"></use>
+      </svg>
+      <h3 style="margin-top: 1rem">1/2 Street,
+        <strong> City</strong>, State,
+        <strong> Country</strong>
+      </h3>
+    </div>
+
+    <div class="phoneNo">
+      <svg width="5rem" height="5rem">
+        <use xlink:href="../../assets/sprite.svg#business-card-phone"></use>
+      </svg>
+      <h3 style="margin-top: 1rem">{{ businesscard?.phone }}</h3>
+    </div>
+
+    <div class="emailId">
+      <svg width="5rem" height="5rem">
+        <use xlink:href="../../assets/sprite.svg#business-card-emailId"></use>
+      </svg>
+      <h4 class="email">{{ businesscard?.Email }}</h4>
+      <h4 class="web">
+        {{ businesscard?.url }}
+      </h4>
+    </div>
+
+  </div>
+</div>
+
+  <div class="button__group">
+  <button class="button__primary" (click)="addToAlbum()">Add to Album</button>
+  <button class="button__secondary" (click)="recap()">Recapture</button>
+</div>
+</span>

@@ -1,0 +1,8 @@
+<div class="camera">
+  <video [hidden]="captures.length != 0" class="camera__frame" #video id="video" autoplay></video>
+
+  <canvas [hidden]="captures.length == 0" class="camera__frame" #canvas id="canvas" width="640" height="480"></canvas>
+
+  <button id="snap" (click)="capture()" class="button__primary">Snap It!</button>
+
+</div>

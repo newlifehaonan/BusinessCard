@@ -1,0 +1,22 @@
+<header class="header">
+  <svg class="search__icon search__icon-primary">
+    <use xlink:href="../../assets/sprite.svg#icon-business-card"></use>
+  </svg>
+  <nav class="user-nav">
+    <div class="user-nav__user">
+      <img src="../../assets/user.jpg" alt="User photo" class="user-nav__user-photo">
+      <span *ngIf="!isLogin">{{userCredential}}</span>
+      <span *ngIf="isLogin"class="user-nav__user-name">Welcome
+        {{userCredential}}
+      </span>
+    </div>
+
+    <div *ngIf="!isLogin" class="user-nav__icon-box">
+      <div (click)="SignIn()">Sign In</div>
+    </div>
+
+    <div *ngIf="isLogin" class="user-nav__icon-box">
+      <div (click)="SignOut()">Sign Out</div>
+    </div>
+  </nav>
+</header>

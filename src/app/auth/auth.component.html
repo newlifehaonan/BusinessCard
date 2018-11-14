@@ -1,0 +1,27 @@
+
+  <form class="form-signin">
+    <div class="text-center mb-4">
+      <svg class="mb-4 form-logo">
+        <use xlink:href="../../assets/sprite.svg#icon-business-card"></use>
+      </svg>
+      <h1 class="h3 mb-3 font-weight-normal">My Business Card</h1>
+      <p>Organize Your Business Contact In An Easy Way</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus [(ngModel)]="email">
+    </div>
+
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required [(ngModel)]="pw">
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" (click)="signIn()">Sign in</button>
+    <button class="btn btn-lg btn-success btn-block" (click)="createUser()">Create Account</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2018 by Harry Chen. All rights reserved.</p>
+  </form>

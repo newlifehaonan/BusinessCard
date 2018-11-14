@@ -1,0 +1,87 @@
+<div class="dashboard-container">
+  <app-spinner *ngIf="spinnershows"></app-spinner>
+  <cdk-virtual-scroll-viewport itemSize="50" class="dashboard">
+    <form action="#" class="search">
+      <input type="text" class="search__input" placeholder="Search BusinessCard">
+      <button class="search__button">
+        <svg class="search__icon">
+          <use xlink:href="../../assets/sprite.svg#icon-magnifying-glass"></use>
+        </svg>
+      </button>
+    </form>
+    <div *cdkVirtualFor="let item of card; index as i"
+         [ngStyle]="{'border-top-color': i%2 == 0 ? 'royalblue' : 'orangered'}">
+      <div class="dashboard__card" (click)="onAnimate(i)">
+        <img src="../../assets/user.jpg" class="dashboard__card-avt">
+        <div class="dashboard__card-info">
+          <div class="dashboard__card-info--fname"  >
+            <!--this needs to be changed-->
+            {{item?.fname}}
+          </div>
+          <div class="dashboard__card-info--lname">
+            <!--//this needs to be changed-->
+            {{item?.lname}}
+          </div>
+        </div>
+        <div class="dashboard__card-rank">
+          {{i}}
+          <sup *ngIf="i == 0">st</sup>
+          <sup *ngIf="i == 1">nd</sup>
+          <sup *ngIf="i == 2">rd</sup>
+          <sup *ngIf="i != 0 && i != 1 && i != 2">th</sup>
+        </div>
+      </div>
+    </div>
+    <button class="button__secondary button__block"(click)="addNewCard()">
+      Add New Card
+    </button>
+  </cdk-virtual-scroll-viewport>
+
+  <!--this needs to be change-->
+
+  <div [@divState]="state" class="card-container">
+    <div class="front-side mb-3">
+      <div class="color-grid">
+        <div class="black"></div>
+        <div class="red1"></div>
+        <div class="red2"></div>
+        <div class="green"></div>
+      </div>
+
+      <div class="info-grid">
+        <div class="name">
+          <h2>{{activeCard?.fname}}</h2>
+          <h5>{{activeCard?.lname}}</h5>
+        </div>
+
+        <div class="addr">
+          <svg width="5rem" height="5rem">
+            <use xlink:href="../../assets/sprite.svg#business-card-location"></use>
+          </svg>
+          <h3 style="margin-top: 1rem">1/2 Street,
+            <strong> City</strong>, State,
+            <strong> Country</strong>
+          </h3>
+        </div>
+
+        <div class="phoneNo">
+          <svg width="5rem" height="5rem">
+            <use xlink:href="../../assets/sprite.svg#business-card-phone"></use>
+          </svg>
+          <h3 style="margin-top: 1rem">{{activeCard?.phone}}</h3>
+        </div>
+
+        <div class="emailId">
+          <svg width="5rem" height="5rem">
+            <use xlink:href="../../assets/sprite.svg#business-card-emailId"></use>
+          </svg>
+          <h4 class="email">{{activeCard?.Email}}</h4>
+          <h4 class="web">
+            {{activeCard?.url}}
+          </h4>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

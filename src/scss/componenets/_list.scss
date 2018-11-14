@@ -1,0 +1,64 @@
+.dashboard {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: $--shadow-light;
+  &__card {
+    border-top: solid 1rem $--color-primary-light;
+    border-radius: 1rem;
+    background-color: $--color-grey-light-1;
+    width: 97%;
+    height: 15rem;
+    margin: 2rem 0rem 2rem 0.5rem;
+    box-shadow: $--shadow-dark;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+    &-avt {
+      border-radius: 100rem;
+      width: 8rem;
+      height: 8rem;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 1rem;
+
+      &--fname {
+        color: black;
+        font-size: 3rem;
+      }
+
+      &--lname {
+        color: $--color-grey-dark-3;
+        font-size: 2rem;
+      }
+
+    }
+
+    &-rank {
+      margin-left: auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__card:hover {
+    background-color: #404040;
+    transition-duration: 0.5s;
+  }
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 200rem;
+  flex: 0 0 20%;
+  box-shadow: $--shadow-light;
+}

@@ -1,27 +1,41 @@
-# Businesscard
+# Businesscard Introduction
+* _"My Business card is a card scaning and manangement E-Card wallet"_
+* _A Web-based application developed in Angular 6 framework_
+* _Developed by Harry Chen in CSC436 DePaul University as his final project_
+* _Idea is provided by the courses Instructor Chandler Gegg_
+* _User Information are save in google firebase_
+* _App are only used for academic learning NOT FOR COMERCIAL BUSINESS_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+# Application Features
 
-## Development server
+* _User authentification: function provided by google firebase auth tool_
+* _User profile and activity log: saved in google firebase database_
+* _App routing between over 10 more componenets_
+* _Dynamic Injection was used during development_
+* _All SCSS features are self developed although view are not responsive yet for mobile_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# How to use
+* `git clone https://github.com/newlifehaonan/BusinessCard.git`
+* Go to `assets/environment.ts` and add your own firebase key and google api key, format is as follow
+```typescript
+// Please do not modify the variable name, otherwise you will manualy change 
+// the variable name in each componenets or services that used it.
+export const config = {
+  apiKey: 'Your Key',
+  authDomain: '',
+  databaseURL: '',
+  projectId: '',
+  storageBucket: '',
+  messagingSenderId: ''
+};
 
-## Code scaffolding
+export const googleApi = {
+  key : 'Your Google Api key'
+}
+```
+* `Npm install` all dependency
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* `Ng serve`
 
-## Build
+* If you have any question about how to lunch the app locally, please contact *HCHEN@520638@gmail.com*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

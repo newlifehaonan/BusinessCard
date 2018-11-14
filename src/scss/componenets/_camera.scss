@@ -1,0 +1,18 @@
+.camera {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: center;
+  margin: 5rem 15rem;
+  min-height: 60rem;
+  &__frame {
+    margin: auto;
+    border: solid 30px #71737f;
+    border-right-color: #82858c;
+    border-left-color: #60626e;
+    width: 63rem;
+    height: 48.8rem;
+    background: #fff;
+  }
+}
