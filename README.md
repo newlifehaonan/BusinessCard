@@ -5,7 +5,8 @@
 * _Idea is provided by the courses Instructor Chandler Gegg_
 * _User Information are save in google firebase_
 * _App are only used for academic learning NOT FOR COMERCIAL BUSINESS_
-* _App are already deployed at google cloud. Please go to `https://businesscard-115bf.appspot.com/landingpage/dashboard` to review!_
+* _App are already deployed at google cloud. Please go to 
+[Business-Card](https://businesscard-115bf.appspot.com/landingpage/dashboard) to review!_
 
 # Application Features
 
