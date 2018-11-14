@@ -6,7 +6,7 @@
 * _User Information are save in google firebase_
 * _App are only used for academic learning NOT FOR COMERCIAL BUSINESS_
 * _App are already deployed at google cloud. Please go to 
-[Business-Card](https://businesscard-115bf.appspot.com/landingpage/dashboard) to review!_
+[Business-Card](https://businesscard-115bf.appspot.com) to review!_
 
 # Application Features
 
