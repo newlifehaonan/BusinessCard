@@ -13,7 +13,6 @@ import {RoutingModule} from './routing/routing.module';
 import {FormsModule, Validators} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {AngularFireModule} from '@angular/fire';
-import {config} from '../environments/environment';
 import {AuthService} from './services/auth.service';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFireDatabase} from '@angular/fire/database';
@@ -30,6 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {DbService} from './services/db.service';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { SuccessupdateComponent } from './successupdate/successupdate.component';
+import { config, googleApi} from '../environments/environment';
 
 
 @NgModule({
